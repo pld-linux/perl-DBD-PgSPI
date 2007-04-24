@@ -6,7 +6,7 @@
 %define	pdir	DBD
 %define	pnam	PgSPI
 Summary:	DBD::PgSPI - PostgreSQL database driver for the DBI module
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	DBD::PgSPI - sterownik bazy danych PostgreSQL dla modułu DBI
 Name:		perl-DBD-PgSPI
 Version:	0.02
 Release:	1
@@ -31,8 +31,15 @@ DBD::PgSPI is a Perl module which works with the DBI module to provide
 access to PostgreSQL database from within pl/perl functions inside the
 database.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+W CELU DOSTĘPU DO BAZY DANYCH POSTGRESQL Z POZIOMU SKRYPTÓW PERLOWYCH
+DZIAŁAJĄCYCH POZA BAZĄ NALEŻY UŻYĆ DBD::Pg, NIE MOŻNA UŻYĆ TEGO
+MODUŁU. TEN MODUŁ SŁUŻY WYŁĄCZNIE DO UŻYWANIA PRZEZ PROCEDURY
+WBUDOWANE NAPISANE W JĘZYKU 'plperl' DZIAŁAJĄCE WEWNĄTRZ POSTGRESQL-a.
+
+DBD::PgSPI to moduł Perla działający z modułem DBI dający dostęp do
+bazy danych PostgreSQL z poziomu funkcji języka pl/perl wewnątrz bazy
+danych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
