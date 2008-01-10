@@ -48,6 +48,7 @@ danych.
 %{__perl} -MDBI::DBD -MExtUtils::MakeMaker -we 'WriteMakefile(NAME=>"DBD::PgSPI", OBJECT=>"PgSPI\$(OBJ_EXT) dbdimp\$(OBJ_EXT)",  INC=>"-I'`pg_config --includedir-server`' -I" . dbd_dbi_arch_dir(),)' \
 	INSTALLDIRS=vendor
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
