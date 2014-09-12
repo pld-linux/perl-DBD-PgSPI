@@ -67,6 +67,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorarch}/DBD/*.pm
 %dir %{perl_vendorarch}/auto/DBD/PgSPI
-%{perl_vendorarch}/auto/DBD/PgSPI/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/PgSPI/*.so
 %{_mandir}/man3/*
